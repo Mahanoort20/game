@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <center>
+    <div id="container">
+        <div class="panel">
+            <h2>I have a random number <br> between 1-100</h2>
+            <h3>Dare to guess??</h3>
+            <hr>
+            <button onclick="newGame"()>NEW GAME</button>
+        </div>
+        <div class="panel">
+            <h3>Enter your guess below &amp; press enter</h3>
+            <input type="number"><hr>
+            <button onclick="guessNum()">check your guess</button>
+            <p>Number of previous attempts: <span>0</span></p>
+        </div>
+        <div class="panel">
+            <p>Your previous guesses:</p>
+            <p id="guessLog"></p>
+        </div>
+    </div></center>
+
+
+
+    <script>
+    var computerGuess;
+    function newGame() {
+        window.location.reload();
+        
+    }
+    let guessGame = parseInt(Math.random() * 100 );
+    function guessNum() {
+        let hardCode= parseInt(document.querySelector("input").value );
+         if  (guessGame >  hardCode){
+             alert( "Your answer is wrong");
+         } else {
+             if (guessGame <  hardCode) {
+                alert( "Your answer is wrong");
+             }
+             else{
+                 alert( "your ans is right");
+             }
+         }
+
+
+
+    }
+
+
+    
+    
+    </script>
+</body>
+
+</html>
